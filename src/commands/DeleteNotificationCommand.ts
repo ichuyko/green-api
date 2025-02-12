@@ -20,6 +20,7 @@ export class DeleteNotificationCommand extends BaseCommand<boolean> {
             return Promise.resolve(deleteNotificationResponse.result);
 
         }).catch((e: any) => {
+            console.error(e);
             return Promise.reject(false);
         });
     }

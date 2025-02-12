@@ -19,25 +19,7 @@ interface Props {
 const MessengerView: FC<Props> = ({instanceConfig, onLogout}: Props) => {
     const [newGroupVisible, setNewGroupVisible] = useState<boolean>(false);
 
-    const items: MenuItemType[] = ["Chat1", "Chat2", "Chat3", "Chat1", "Chat2", "Chat3", "Chat1", "Chat2", "Chat3", "Chat1", "Chat2", "Chat3", "Chat1", "Chat2", "Chat3", "Chat1", "Chat2", "Chat3", "Chat1", "Chat2", "Chat3", "Chat1", "Chat2", "Chat3", "Chat1", "Chat2", "Chat3", "Chat1", "Chat2", "Chat3", "Chat1", "Chat2", "Chat3", "Chat1", "Chat2", "Chat3", "Chat1", "Chat2", "Chat3", ].map(
-        (name: string, index: number) => ({
-            key: `${name}_${index}`,
-            label: name,
-        }),
-    );
-
-    const myChats: MenuItemType[] = [
-        {
-            key: "120363400246337090@g.us",
-            label: "120363400246337090"
-        },
-        {
-            key: "120363400164924999@g.us",
-            label: "120363400164924999"
-        },
-    ];
-
-    const [menuItems, setMenuItems] = useState<MenuItemType[]>([]); // myChats || items
+    const [menuItems, setMenuItems] = useState<MenuItemType[]>([]);
     const [selectedMenuKeys, setSelectedMenuKeys] = useState<string[]>([]);
 
 
